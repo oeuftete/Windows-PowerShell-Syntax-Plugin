@@ -1,6 +1,6 @@
 " Vim syntax file
-" Language:	Windows PowerShell
-" Maintainer:	Peter Provost <peter@provost.org>
+" Language: Windows PowerShell
+" Maintainer: Peter Provost <peter@provost.org>
 " Version: 2.9
 " Project Repository: https://github.com/PProvost/vim-ps1
 " Vim Script Page: http://www.vim.org/scripts/script.php?script_id=1327"
@@ -38,7 +38,7 @@ syn match ps1Keyword /\<where\>/ nextgroup=ps1Block skipwhite
 
 syn keyword ps1Exception begin process end exit
 syn keyword ps1Keyword try catch finally throw
-syn keyword ps1Keyword return filter in trap param data dynamicparam 
+syn keyword ps1Keyword return filter in trap param data dynamicparam
 syn match ps1Keyword /&/
 syn keyword ps1Constant $true $false $null
 syn match ps1Constant +\$?+
@@ -61,8 +61,8 @@ syn match ps1StandaloneType /[a-z0-9_.]\+/ contained
 syn keyword ps1Scope global local private script contained
 
 " Variables and other user defined items
-syn match ps1Variable /\$\w\+/	
-syn match ps1Variable /\${\w\+:\\\w\+}/ 
+syn match ps1Variable /\$\w\+/
+syn match ps1Variable /\${\w\+:\\\w\+}/
 syn match ps1ScopedVariable /\$\w\+:\w\+/ contains=ps1Scope
 syn match ps1VariableName /\w\+/ contained
 
@@ -77,7 +77,7 @@ syn keyword ps1Operator f contained
 
 " Regular Strings
 " These aren't precisely correct and could use some work
-syn region ps1String start=/"/ skip=/`"/ end=/"/ contains=@ps1StringSpecial 
+syn region ps1String start=/"/ skip=/`"/ end=/"/ contains=@ps1StringSpecial
 syn region ps1String start=/'/ skip=/''/ end=/'/
 
 " Here-Strings
@@ -92,10 +92,10 @@ syn cluster ps1StringSpecial contains=ps1Escape,ps1Interpolation,ps1Variable,ps1
 
 " Numbers
 " syn match ps1Number /\<[0-9]\+/
-syn match   ps1Number		"\<\(0[xX]\x\+\|\d\+\)\([MGTP][B]\)\=\>"
-syn match   ps1Number		"\(\<\d\+\.\d*\|\.\d\+\)\([eE][-+]\=\d\+\)\=[dD]\="
-syn match   ps1Number		"\<\d\+[eE][-+]\=\d\+[dD]\=\>"
-syn match   ps1Number		"\<\d\+\([eE][-+]\=\d\+\)\=[dD]\>"
+syn match   ps1Number    "\<\(0[xX]\x\+\|\d\+\)\([MGTP][B]\)\=\>"
+syn match   ps1Number    "\(\<\d\+\.\d*\|\.\d\+\)\([eE][-+]\=\d\+\)\=[dD]\="
+syn match   ps1Number    "\<\d\+[eE][-+]\=\d\+[dD]\=\>"
+syn match   ps1Number    "\<\d\+\([eE][-+]\=\d\+\)\=[dD]\>"
 
 " Constants
 syn match ps1Boolean "$\%(true\|false\)\>"
@@ -117,10 +117,10 @@ if version >= 508 || !exists("did_ps1_syn_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-	HiLink ps1Number Number
-	HiLink ps1Block Block
-	HiLink ps1Exception Exception
-	HiLink ps1Constant Constant
+  HiLink ps1Number Number
+  HiLink ps1Block Block
+  HiLink ps1Exception Exception
+  HiLink ps1Constant Constant
   HiLink ps1String String
   HiLink ps1Escape SpecialChar
   HiLink ps1InterpolationDelimiter Delimiter

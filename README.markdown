@@ -1,7 +1,7 @@
 ps1.vim
 =======
 
-If you are a Windows PowerShell user who uses Vim or Gvim for editing scripts, 
+If you are a Windows PowerShell user who uses Vim or Gvim for editing scripts,
 then this plugin is for you.
 
 It provides nice syntax coloring and indenting for Windows PowerShell (.ps1)
@@ -35,13 +35,13 @@ License
 -------
 
     Copyright 2005-2012 Peter Provost
-    
+
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-    
+
     http://www.apache.org/licenses/LICENSE-2.0
-    
+
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
